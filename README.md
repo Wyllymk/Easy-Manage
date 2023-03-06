@@ -9,14 +9,14 @@ MySQL
 
 ## Requirements 
 The Easy-Manage app should have the following features: It should:  
-	- Allow users to create an account
-	- An admin admits or denies created accounts, a user can login only if an account is admitted 
-	- Allow Admin to deactivate users 
-	- Allow users to search other users  
-	- Deactivated users should no longer appear in the search list of users
-	- Allow Admin to create projects and assign to users
-	- A user should only be assigned one project and can be reassigned a project on completing current project
-	- An admin should be able to view a Google Map with Markers where a user is accessing their accounts from.
+- Allow users to create an account
+- An admin admits or denies created accounts, a user can login only if an account is admitted 
+- Allow Admin to deactivate users 
+- Allow users to search other users  
+- Deactivated users should no longer appear in the search list of users
+- Allow Admin to create projects and assign to users
+- A user should only be assigned one project and can be reassigned a project on completing current project
+- An admin should be able to view a Google Map with Markers where a user is accessing their accounts from.
  
 ## Optional 
 - Let your users receive emails when they are assigned a project
