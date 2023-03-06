@@ -1,0 +1,12 @@
+### converting project to json
+
+GET http://localhost/project/wp-json/wp/v2/posts
+
+### Using post method
+POST http://localhost/project/wp-json/jwt-auth/v1/token
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin1234"
+}
