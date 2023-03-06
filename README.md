@@ -48,7 +48,7 @@ Show the different pages your application will have.
  
 
 ## Milestones and Reviews 
- 	###### Milestones 	Review Date 
+ 	Milestones 		Review Date 
  	Wireframes 		7th March 2023
  	Frontend 		13th March 2023
  	Backend			20th March 2023
