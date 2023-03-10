@@ -6,7 +6,10 @@
 <!-- Navbar 1 - Bootstrap Brain Component -->
 <nav id="scrollspyNav" class="navbar navbar-expand-md wave-bg-blue bsb-navbar bsb-navbar-hover bsb-navbar-caret">
   <div class="container">
-    <a class="navbar-brand easy-manage" href="Easy-Manage/dashboard">Easy Manage</a>
+    <a class="ms-2 navbar-brand easy-manage" href="../Easy-Manage/dashboard">
+      <img src="<?php echo get_template_directory_uri(  )?>/assets/img/hero/download.png" alt="" height="24" class="d-inline-block align-text-top">
+      Easy Manage
+    </a>
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
@@ -35,7 +38,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#scrollspyContact" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar">Contact</a>
           </li>
-          <a class="btn btn-primary px-5" href="<?php echo esc_url(wp_login_url(get_permalink())); ?>" role="button">Login</a>
+          <a class="btn btn-primary px-5 align-self-center" href="../Easy-manage/register" role="button">Sign Up</a>
         </ul>
       </div>
     </div>
@@ -52,7 +55,7 @@
       <h1 class="display-3 fw-bolder mb-3">We provide easy <span class="wave-font-hw display-2 text-danger text-accent fw-normal">solutions</span>   for startups at affordable rates.</h1>
       <p class="fs-4 mb-5">Our methods are straight, comfortable, and established to ensure evolution and acceleration.</p>
       <div class="d-grid gap-2 d-sm-flex">
-        <a class="btn btn-primary rounded-pill gap-3 px-4" href="<?php echo esc_url(wp_login_url(get_permalink())); ?>" role="button">Get Started</a>
+        <a class="btn btn-primary rounded-pill gap-3 px-4" href="../Easy-Manage/register" role="button">Get Started</a>
         <a class="btn btn-outline-primary rounded-pill gap-3 px-4" href="#scrollspyContact" role="button">Contact Us</a>
       </div>
     </div>

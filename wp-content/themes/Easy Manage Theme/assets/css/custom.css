@@ -44,6 +44,14 @@ a{text-decoration: none}
 .the-navbar{
     margin-top: 32px;
 }
+.navbar{
+    padding: 0px;
+    margin: 0px;
+}
+.navbar-brand{
+    padding: 0px;
+    margin: 0px;
+}
 .iq-top-navbar{
     background-color: #ffffff;
 }

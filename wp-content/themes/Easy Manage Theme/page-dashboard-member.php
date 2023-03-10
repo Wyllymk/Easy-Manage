@@ -4,7 +4,7 @@
  */
 get_header();?>
 <?php
-$current_user = wp_get_current_user();
+ $current_user = wp_get_current_user();
 
 ?>
     <!-- Wrapper Start -->

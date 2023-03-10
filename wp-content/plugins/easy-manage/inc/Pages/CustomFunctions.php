@@ -15,7 +15,7 @@ class CustomFunctions{
         // add_action( 'save_post_project', array($this, 'save_project_user'), 10, 3 );
         // add_filter( 'user_has_cap', array($this, 'check_project_user_capability'), 10, 4 );
         add_action( 'login_enqueue_scripts', array($this, 'wpb_login_logo') );
-
+        add_action('template_redirect', array($this, 'my_non_logged_redirect'));
 
     }
 
@@ -88,6 +88,9 @@ class CustomFunctions{
         return $allcaps;
       }
 
+    /*
+    *   Change Logo in login page
+    */
     function wpb_login_logo() { ?>
         <style type="text/css">
             #login h1 a, .login h1 a {
@@ -101,6 +104,18 @@ class CustomFunctions{
         </style>
     <?php }
 
+    /*
+    *   Restrict non logged users to certain pages
+    */
 
+    
+    function my_non_logged_redirect()
+    {
+        if ((is_page('dashboard') || is_page('projects')|| is_page('members') || is_page('user-profile')) && !is_user_logged_in() )
+        {
+            wp_redirect( home_url() );
+            die();
+        }
+    } 
 
 }
