@@ -1,0 +1,574 @@
+[08-Mar-2023 05:49:35 UTC] PHP Parse error:  syntax error, unexpected double-quoted string ">", expecting "," or ";" in C:\wamp64\www\Easy-Manage\wp-content\themes\Easy Manage Theme\header.php on line 13
+[08-Mar-2023 06:00:35 UTC] PHP Parse error:  Unmatched '}' in C:\wamp64\www\Easy-Manage\wp-content\themes\Easy Manage Theme\functions.php on line 24
+[08-Mar-2023 07:26:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function et_template_directory_uri() in C:\wamp64\www\Easy-Manage\wp-content\themes\Easy Manage Theme\front-page.php:62
+Stack trace:
+#0 C:\wamp64\www\Easy-Manage\wp-includes\template-loader.php(106): include()
+#1 C:\wamp64\www\Easy-Manage\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\E...')
+#2 C:\wamp64\www\Easy-Manage\index.php(17): require('C:\\wamp64\\www\\E...')
+#3 {main}
+  thrown in C:\wamp64\www\Easy-Manage\wp-content\themes\Easy Manage Theme\front-page.php on line 62
+[08-Mar-2023 10:44:49 UTC] PHP Warning:  Undefined variable $data in C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php on line 52
+[08-Mar-2023 10:44:49 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:49 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:49 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:49 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:49 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:49 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:49 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:49 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:49 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:49 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:49 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2634
+[08-Mar-2023 10:44:49 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:49 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:49 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:49 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:49 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:49 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:49 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:49 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:49 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:49 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:49 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:49 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:49 UTC] PHP  12. wpdb->process_fields($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2391
+[08-Mar-2023 10:44:49 UTC] PHP  13. wpdb->process_field_formats($data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2572
+[08-Mar-2023 10:44:49 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2666
+[08-Mar-2023 10:44:49 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:49 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:49 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:49 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:49 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:49 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:49 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:49 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:49 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:49 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:49 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:49 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:49 UTC] PHP  12. wpdb->process_fields($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2391
+[08-Mar-2023 10:44:49 UTC] PHP  13. wpdb->process_field_charsets($data = NULL, $table = 'wp_contact') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2577
+[08-Mar-2023 10:44:49 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2697
+[08-Mar-2023 10:44:49 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:49 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:49 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:49 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:49 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:49 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:49 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:49 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:49 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:49 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:49 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:49 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:49 UTC] PHP  12. wpdb->process_fields($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2391
+[08-Mar-2023 10:44:49 UTC] PHP  13. wpdb->process_field_lengths($data = NULL, $table = 'wp_contact') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2582
+[08-Mar-2023 10:44:49 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 3260
+[08-Mar-2023 10:44:49 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:49 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:49 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:49 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:49 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:49 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:49 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:49 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:49 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:49 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:49 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:49 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:49 UTC] PHP  12. wpdb->process_fields($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2391
+[08-Mar-2023 10:44:49 UTC] PHP  13. wpdb->strip_invalid_text($data = NULL) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2587
+[08-Mar-2023 10:44:49 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2398
+[08-Mar-2023 10:44:49 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:49 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:49 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:49 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:49 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:49 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:49 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:49 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:49 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:49 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:49 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:49 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:49 UTC] PHP Fatal error:  Uncaught TypeError: array_keys(): Argument #1 ($array) must be of type array, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2408
+Stack trace:
+#0 C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php(2408): array_keys(NULL)
+#1 C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php(2326): wpdb->_insert_replace_helper('wp_contact', NULL, Array, 'INSERT')
+#2 C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php(52): wpdb->insert('wp_contact', NULL, Array)
+#3 C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php(11): Inc\Pages\Contact->insertDataTable()
+#4 C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php(23): Inc\Pages\Contact->register()
+#5 C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php(39): Inc\Init::register_services()
+#6 C:\wamp64\www\Easy-Manage\wp-settings.php(447): include_once('C:\\wamp64\\www\\E...')
+#7 C:\wamp64\www\Easy-Manage\wp-config.php(98): require_once('C:\\wamp64\\www\\E...')
+#8 C:\wamp64\www\Easy-Manage\wp-load.php(50): require_once('C:\\wamp64\\www\\E...')
+#9 C:\wamp64\www\Easy-Manage\wp-blog-header.php(13): require_once('C:\\wamp64\\www\\E...')
+#10 C:\wamp64\www\Easy-Manage\index.php(17): require('C:\\wamp64\\www\\E...')
+#11 {main}
+  thrown in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2408
+[08-Mar-2023 10:44:51 UTC] PHP Warning:  Undefined variable $data in C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php on line 52
+[08-Mar-2023 10:44:51 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:51 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:51 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:51 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:51 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:51 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:51 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:51 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:51 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:51 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:51 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2634
+[08-Mar-2023 10:44:51 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:51 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:51 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:51 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:51 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:51 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:51 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:51 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:51 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:51 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:51 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:51 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:51 UTC] PHP  12. wpdb->process_fields($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2391
+[08-Mar-2023 10:44:51 UTC] PHP  13. wpdb->process_field_formats($data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2572
+[08-Mar-2023 10:44:51 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2666
+[08-Mar-2023 10:44:51 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:51 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:51 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:51 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:51 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:51 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:51 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:51 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:51 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:51 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:51 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:51 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:51 UTC] PHP  12. wpdb->process_fields($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2391
+[08-Mar-2023 10:44:51 UTC] PHP  13. wpdb->process_field_charsets($data = NULL, $table = 'wp_contact') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2577
+[08-Mar-2023 10:44:51 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2697
+[08-Mar-2023 10:44:51 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:51 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:51 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:51 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:51 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:51 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:51 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:51 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:51 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:51 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:51 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:51 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:51 UTC] PHP  12. wpdb->process_fields($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2391
+[08-Mar-2023 10:44:51 UTC] PHP  13. wpdb->process_field_lengths($data = NULL, $table = 'wp_contact') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2582
+[08-Mar-2023 10:44:51 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 3260
+[08-Mar-2023 10:44:51 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:51 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:51 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:51 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:51 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:51 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:51 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:51 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:51 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:51 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:51 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:51 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:51 UTC] PHP  12. wpdb->process_fields($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2391
+[08-Mar-2023 10:44:51 UTC] PHP  13. wpdb->strip_invalid_text($data = NULL) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2587
+[08-Mar-2023 10:44:51 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2398
+[08-Mar-2023 10:44:51 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:51 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:51 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:51 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:51 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:51 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:51 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:51 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:51 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:51 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:51 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:51 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:51 UTC] PHP Fatal error:  Uncaught TypeError: array_keys(): Argument #1 ($array) must be of type array, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2408
+Stack trace:
+#0 C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php(2408): array_keys(NULL)
+#1 C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php(2326): wpdb->_insert_replace_helper('wp_contact', NULL, Array, 'INSERT')
+#2 C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php(52): wpdb->insert('wp_contact', NULL, Array)
+#3 C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php(11): Inc\Pages\Contact->insertDataTable()
+#4 C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php(23): Inc\Pages\Contact->register()
+#5 C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php(39): Inc\Init::register_services()
+#6 C:\wamp64\www\Easy-Manage\wp-settings.php(447): include_once('C:\\wamp64\\www\\E...')
+#7 C:\wamp64\www\Easy-Manage\wp-config.php(98): require_once('C:\\wamp64\\www\\E...')
+#8 C:\wamp64\www\Easy-Manage\wp-load.php(50): require_once('C:\\wamp64\\www\\E...')
+#9 C:\wamp64\www\Easy-Manage\wp-blog-header.php(13): require_once('C:\\wamp64\\www\\E...')
+#10 C:\wamp64\www\Easy-Manage\index.php(17): require('C:\\wamp64\\www\\E...')
+#11 {main}
+  thrown in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2408
+[08-Mar-2023 10:44:52 UTC] PHP Warning:  Undefined variable $data in C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php on line 52
+[08-Mar-2023 10:44:52 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:52 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:52 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:52 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:52 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:52 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:52 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:52 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:52 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:52 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:52 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2634
+[08-Mar-2023 10:44:52 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:52 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:52 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:52 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:52 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:52 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:52 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:52 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:52 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:52 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:52 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:52 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:52 UTC] PHP  12. wpdb->process_fields($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2391
+[08-Mar-2023 10:44:52 UTC] PHP  13. wpdb->process_field_formats($data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2572
+[08-Mar-2023 10:44:52 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2666
+[08-Mar-2023 10:44:52 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:52 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:52 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:52 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:52 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:52 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:52 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:52 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:52 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:52 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:52 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:52 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:52 UTC] PHP  12. wpdb->process_fields($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2391
+[08-Mar-2023 10:44:52 UTC] PHP  13. wpdb->process_field_charsets($data = NULL, $table = 'wp_contact') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2577
+[08-Mar-2023 10:44:52 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2697
+[08-Mar-2023 10:44:52 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:52 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:52 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:52 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:52 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:52 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:52 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:52 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:52 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:52 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:52 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:52 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:52 UTC] PHP  12. wpdb->process_fields($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2391
+[08-Mar-2023 10:44:52 UTC] PHP  13. wpdb->process_field_lengths($data = NULL, $table = 'wp_contact') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2582
+[08-Mar-2023 10:44:52 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 3260
+[08-Mar-2023 10:44:52 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:52 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:52 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:52 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:52 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:52 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:52 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:52 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:52 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:52 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:52 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:52 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:52 UTC] PHP  12. wpdb->process_fields($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2391
+[08-Mar-2023 10:44:52 UTC] PHP  13. wpdb->strip_invalid_text($data = NULL) C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2587
+[08-Mar-2023 10:44:52 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2398
+[08-Mar-2023 10:44:52 UTC] PHP Stack trace:
+[08-Mar-2023 10:44:52 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[08-Mar-2023 10:44:52 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[08-Mar-2023 10:44:52 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[08-Mar-2023 10:44:52 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 10:44:52 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 10:44:52 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 10:44:52 UTC] PHP   7. Inc\Init::register_services() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php:39
+[08-Mar-2023 10:44:52 UTC] PHP   8. Inc\Pages\Contact->register() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php:23
+[08-Mar-2023 10:44:52 UTC] PHP   9. Inc\Pages\Contact->insertDataTable() C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:11
+[08-Mar-2023 10:44:52 UTC] PHP  10. wpdb->insert($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s']) C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php:52
+[08-Mar-2023 10:44:52 UTC] PHP  11. wpdb->_insert_replace_helper($table = 'wp_contact', $data = NULL, $format = [0 => '%s', 1 => '%s', 2 => '%s', 3 => '%s'], $type = 'INSERT') C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2326
+[08-Mar-2023 10:44:52 UTC] PHP Fatal error:  Uncaught TypeError: array_keys(): Argument #1 ($array) must be of type array, null given in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php:2408
+Stack trace:
+#0 C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php(2408): array_keys(NULL)
+#1 C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php(2326): wpdb->_insert_replace_helper('wp_contact', NULL, Array, 'INSERT')
+#2 C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php(52): wpdb->insert('wp_contact', NULL, Array)
+#3 C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Pages\Contact.php(11): Inc\Pages\Contact->insertDataTable()
+#4 C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\inc\Init.php(23): Inc\Pages\Contact->register()
+#5 C:\wamp64\www\Easy-Manage\wp-content\plugins\easy-manage\easy-manage.php(39): Inc\Init::register_services()
+#6 C:\wamp64\www\Easy-Manage\wp-settings.php(447): include_once('C:\\wamp64\\www\\E...')
+#7 C:\wamp64\www\Easy-Manage\wp-config.php(98): require_once('C:\\wamp64\\www\\E...')
+#8 C:\wamp64\www\Easy-Manage\wp-load.php(50): require_once('C:\\wamp64\\www\\E...')
+#9 C:\wamp64\www\Easy-Manage\wp-blog-header.php(13): require_once('C:\\wamp64\\www\\E...')
+#10 C:\wamp64\www\Easy-Manage\index.php(17): require('C:\\wamp64\\www\\E...')
+#11 {main}
+  thrown in C:\wamp64\www\Easy-Manage\wp-includes\class-wpdb.php on line 2408
+[08-Mar-2023 11:14:41 UTC] PHP Deprecated:  Required parameter $field follows optional parameter $post_id in C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\includes\acf-value-functions.php on line 54
+[08-Mar-2023 11:14:41 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:41 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:41 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:41 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-admin\admin.php:34
+[08-Mar-2023 11:14:41 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 11:14:41 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 11:14:41 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 11:14:41 UTC] PHP   7. acf() C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:655
+[08-Mar-2023 11:14:41 UTC] PHP   8. ACF->initialize() C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:649
+[08-Mar-2023 11:14:41 UTC] PHP   9. acf_include($filename = 'includes/acf-value-functions.php') C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:123
+[08-Mar-2023 11:14:41 UTC] PHP Deprecated:  Required parameter $field follows optional parameter $value in C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\includes\acf-value-functions.php on line 166
+[08-Mar-2023 11:14:41 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:41 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:41 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:41 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-admin\admin.php:34
+[08-Mar-2023 11:14:41 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 11:14:41 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 11:14:41 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 11:14:41 UTC] PHP   7. acf() C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:655
+[08-Mar-2023 11:14:41 UTC] PHP   8. ACF->initialize() C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:649
+[08-Mar-2023 11:14:41 UTC] PHP   9. acf_include($filename = 'includes/acf-value-functions.php') C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:123
+[08-Mar-2023 11:14:41 UTC] PHP Deprecated:  Required parameter $value follows optional parameter $key in C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\includes\ajax\class-acf-ajax.php on line 76
+[08-Mar-2023 11:14:41 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:41 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:41 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:41 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-admin\admin.php:34
+[08-Mar-2023 11:14:41 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 11:14:41 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 11:14:41 UTC] PHP   6. include_once() C:\wamp64\www\Easy-Manage\wp-settings.php:447
+[08-Mar-2023 11:14:41 UTC] PHP   7. acf() C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:655
+[08-Mar-2023 11:14:41 UTC] PHP   8. ACF->initialize() C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:649
+[08-Mar-2023 11:14:41 UTC] PHP   9. acf_include($filename = 'includes/ajax/class-acf-ajax.php') C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:145
+[08-Mar-2023 11:14:41 UTC] PHP Deprecated:  Required parameter $field follows optional parameter $i in C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\fields\class-acf-field-repeater.php on line 721
+[08-Mar-2023 11:14:41 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:41 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:41 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:41 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-admin\admin.php:34
+[08-Mar-2023 11:14:41 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 11:14:41 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 11:14:41 UTC] PHP   6. do_action($hook_name = 'init') C:\wamp64\www\Easy-Manage\wp-settings.php:617
+[08-Mar-2023 11:14:41 UTC] PHP   7. WP_Hook->do_action($args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP   8. WP_Hook->apply_filters($value = '', $args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP   9. ACF->init('') C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  10. do_action($hook_name = 'acf/include_field_types', ...$arg = variadic(5)) C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:273
+[08-Mar-2023 11:14:41 UTC] PHP  11. WP_Hook->do_action($args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP  12. WP_Hook->apply_filters($value = '', $args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP  13. acf_pro->include_field_types(5) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  14. acf_include($filename = 'pro/fields/class-acf-field-repeater.php') C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\acf-pro.php:69
+[08-Mar-2023 11:14:41 UTC] PHP Deprecated:  Required parameter $post_id follows optional parameter $i in C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\fields\class-acf-field-repeater.php on line 721
+[08-Mar-2023 11:14:41 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:41 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:41 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:41 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-admin\admin.php:34
+[08-Mar-2023 11:14:41 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 11:14:41 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 11:14:41 UTC] PHP   6. do_action($hook_name = 'init') C:\wamp64\www\Easy-Manage\wp-settings.php:617
+[08-Mar-2023 11:14:41 UTC] PHP   7. WP_Hook->do_action($args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP   8. WP_Hook->apply_filters($value = '', $args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP   9. ACF->init('') C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  10. do_action($hook_name = 'acf/include_field_types', ...$arg = variadic(5)) C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:273
+[08-Mar-2023 11:14:41 UTC] PHP  11. WP_Hook->do_action($args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP  12. WP_Hook->apply_filters($value = '', $args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP  13. acf_pro->include_field_types(5) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  14. acf_include($filename = 'pro/fields/class-acf-field-repeater.php') C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\acf-pro.php:69
+[08-Mar-2023 11:14:41 UTC] PHP Deprecated:  Required parameter $field follows optional parameter $i in C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\fields\class-acf-field-repeater.php on line 787
+[08-Mar-2023 11:14:41 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:41 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:41 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:41 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-admin\admin.php:34
+[08-Mar-2023 11:14:41 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 11:14:41 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 11:14:41 UTC] PHP   6. do_action($hook_name = 'init') C:\wamp64\www\Easy-Manage\wp-settings.php:617
+[08-Mar-2023 11:14:41 UTC] PHP   7. WP_Hook->do_action($args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP   8. WP_Hook->apply_filters($value = '', $args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP   9. ACF->init('') C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  10. do_action($hook_name = 'acf/include_field_types', ...$arg = variadic(5)) C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:273
+[08-Mar-2023 11:14:41 UTC] PHP  11. WP_Hook->do_action($args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP  12. WP_Hook->apply_filters($value = '', $args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP  13. acf_pro->include_field_types(5) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  14. acf_include($filename = 'pro/fields/class-acf-field-repeater.php') C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\acf-pro.php:69
+[08-Mar-2023 11:14:41 UTC] PHP Deprecated:  Required parameter $post_id follows optional parameter $i in C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\fields\class-acf-field-repeater.php on line 787
+[08-Mar-2023 11:14:41 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:41 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:41 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:41 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-admin\admin.php:34
+[08-Mar-2023 11:14:41 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 11:14:41 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 11:14:41 UTC] PHP   6. do_action($hook_name = 'init') C:\wamp64\www\Easy-Manage\wp-settings.php:617
+[08-Mar-2023 11:14:41 UTC] PHP   7. WP_Hook->do_action($args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP   8. WP_Hook->apply_filters($value = '', $args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP   9. ACF->init('') C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  10. do_action($hook_name = 'acf/include_field_types', ...$arg = variadic(5)) C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:273
+[08-Mar-2023 11:14:41 UTC] PHP  11. WP_Hook->do_action($args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP  12. WP_Hook->apply_filters($value = '', $args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP  13. acf_pro->include_field_types(5) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  14. acf_include($filename = 'pro/fields/class-acf-field-repeater.php') C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\acf-pro.php:69
+[08-Mar-2023 11:14:41 UTC] PHP Deprecated:  Required parameter $field follows optional parameter $name in C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\fields\class-acf-field-flexible-content.php on line 1040
+[08-Mar-2023 11:14:41 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:41 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:41 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:41 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-admin\admin.php:34
+[08-Mar-2023 11:14:41 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 11:14:41 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 11:14:41 UTC] PHP   6. do_action($hook_name = 'init') C:\wamp64\www\Easy-Manage\wp-settings.php:617
+[08-Mar-2023 11:14:41 UTC] PHP   7. WP_Hook->do_action($args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP   8. WP_Hook->apply_filters($value = '', $args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP   9. ACF->init('') C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  10. do_action($hook_name = 'acf/include_field_types', ...$arg = variadic(5)) C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:273
+[08-Mar-2023 11:14:41 UTC] PHP  11. WP_Hook->do_action($args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP  12. WP_Hook->apply_filters($value = '', $args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP  13. acf_pro->include_field_types(5) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  14. acf_include($filename = 'pro/fields/class-acf-field-flexible-content.php') C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\acf-pro.php:70
+[08-Mar-2023 11:14:41 UTC] PHP Deprecated:  Required parameter $field follows optional parameter $i in C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\fields\class-acf-field-flexible-content.php on line 1076
+[08-Mar-2023 11:14:41 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:41 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:41 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:41 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-admin\admin.php:34
+[08-Mar-2023 11:14:41 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 11:14:41 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 11:14:41 UTC] PHP   6. do_action($hook_name = 'init') C:\wamp64\www\Easy-Manage\wp-settings.php:617
+[08-Mar-2023 11:14:41 UTC] PHP   7. WP_Hook->do_action($args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP   8. WP_Hook->apply_filters($value = '', $args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP   9. ACF->init('') C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  10. do_action($hook_name = 'acf/include_field_types', ...$arg = variadic(5)) C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:273
+[08-Mar-2023 11:14:41 UTC] PHP  11. WP_Hook->do_action($args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP  12. WP_Hook->apply_filters($value = '', $args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP  13. acf_pro->include_field_types(5) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  14. acf_include($filename = 'pro/fields/class-acf-field-flexible-content.php') C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\acf-pro.php:70
+[08-Mar-2023 11:14:41 UTC] PHP Deprecated:  Required parameter $post_id follows optional parameter $i in C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\fields\class-acf-field-flexible-content.php on line 1076
+[08-Mar-2023 11:14:41 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:41 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:41 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:41 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-admin\admin.php:34
+[08-Mar-2023 11:14:41 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 11:14:41 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 11:14:41 UTC] PHP   6. do_action($hook_name = 'init') C:\wamp64\www\Easy-Manage\wp-settings.php:617
+[08-Mar-2023 11:14:41 UTC] PHP   7. WP_Hook->do_action($args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP   8. WP_Hook->apply_filters($value = '', $args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP   9. ACF->init('') C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  10. do_action($hook_name = 'acf/include_field_types', ...$arg = variadic(5)) C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:273
+[08-Mar-2023 11:14:41 UTC] PHP  11. WP_Hook->do_action($args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP  12. WP_Hook->apply_filters($value = '', $args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP  13. acf_pro->include_field_types(5) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  14. acf_include($filename = 'pro/fields/class-acf-field-flexible-content.php') C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\acf-pro.php:70
+[08-Mar-2023 11:14:41 UTC] PHP Deprecated:  Required parameter $field follows optional parameter $i in C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\fields\class-acf-field-flexible-content.php on line 1128
+[08-Mar-2023 11:14:41 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:41 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:41 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:41 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-admin\admin.php:34
+[08-Mar-2023 11:14:41 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 11:14:41 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 11:14:41 UTC] PHP   6. do_action($hook_name = 'init') C:\wamp64\www\Easy-Manage\wp-settings.php:617
+[08-Mar-2023 11:14:41 UTC] PHP   7. WP_Hook->do_action($args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP   8. WP_Hook->apply_filters($value = '', $args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP   9. ACF->init('') C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  10. do_action($hook_name = 'acf/include_field_types', ...$arg = variadic(5)) C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:273
+[08-Mar-2023 11:14:41 UTC] PHP  11. WP_Hook->do_action($args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP  12. WP_Hook->apply_filters($value = '', $args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP  13. acf_pro->include_field_types(5) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  14. acf_include($filename = 'pro/fields/class-acf-field-flexible-content.php') C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\acf-pro.php:70
+[08-Mar-2023 11:14:41 UTC] PHP Deprecated:  Required parameter $post_id follows optional parameter $i in C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\fields\class-acf-field-flexible-content.php on line 1128
+[08-Mar-2023 11:14:41 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:41 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:41 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:41 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-admin\admin.php:34
+[08-Mar-2023 11:14:41 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 11:14:41 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 11:14:41 UTC] PHP   6. do_action($hook_name = 'init') C:\wamp64\www\Easy-Manage\wp-settings.php:617
+[08-Mar-2023 11:14:41 UTC] PHP   7. WP_Hook->do_action($args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP   8. WP_Hook->apply_filters($value = '', $args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP   9. ACF->init('') C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  10. do_action($hook_name = 'acf/include_field_types', ...$arg = variadic(5)) C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:273
+[08-Mar-2023 11:14:41 UTC] PHP  11. WP_Hook->do_action($args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP  12. WP_Hook->apply_filters($value = '', $args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP  13. acf_pro->include_field_types(5) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  14. acf_include($filename = 'pro/fields/class-acf-field-flexible-content.php') C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\acf-pro.php:70
+[08-Mar-2023 11:14:41 UTC] PHP Deprecated:  Required parameter $field follows optional parameter $id in C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\fields\class-acf-field-gallery.php on line 296
+[08-Mar-2023 11:14:41 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:41 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:41 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:41 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-admin\admin.php:34
+[08-Mar-2023 11:14:41 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[08-Mar-2023 11:14:41 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[08-Mar-2023 11:14:41 UTC] PHP   6. do_action($hook_name = 'init') C:\wamp64\www\Easy-Manage\wp-settings.php:617
+[08-Mar-2023 11:14:41 UTC] PHP   7. WP_Hook->do_action($args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP   8. WP_Hook->apply_filters($value = '', $args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP   9. ACF->init('') C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  10. do_action($hook_name = 'acf/include_field_types', ...$arg = variadic(5)) C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\acf.php:273
+[08-Mar-2023 11:14:41 UTC] PHP  11. WP_Hook->do_action($args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:41 UTC] PHP  12. WP_Hook->apply_filters($value = '', $args = [0 => 5]) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:41 UTC] PHP  13. acf_pro->include_field_types(5) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:41 UTC] PHP  14. acf_include($filename = 'pro/fields/class-acf-field-gallery.php') C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\pro\acf-pro.php:71
+[08-Mar-2023 11:14:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\includes\acf-value-functions.php:166) in C:\wamp64\www\Easy-Manage\wp-admin\includes\misc.php on line 1416
+[08-Mar-2023 11:14:43 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:43 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:43 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:43 UTC] PHP   3. do_action($hook_name = 'admin_init') C:\wamp64\www\Easy-Manage\wp-admin\admin.php:175
+[08-Mar-2023 11:14:43 UTC] PHP   4. WP_Hook->do_action($args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:43 UTC] PHP   5. WP_Hook->apply_filters($value = '', $args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:43 UTC] PHP   6. wp_admin_headers('') C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:308
+[08-Mar-2023 11:14:43 UTC] PHP   7. header($header = 'Referrer-Policy: strict-origin-when-cross-origin') C:\wamp64\www\Easy-Manage\wp-admin\includes\misc.php:1416
+[08-Mar-2023 11:14:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\includes\acf-value-functions.php:166) in C:\wamp64\www\Easy-Manage\wp-includes\functions.php on line 6865
+[08-Mar-2023 11:14:43 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:43 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:43 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:10
+[08-Mar-2023 11:14:43 UTC] PHP   3. do_action($hook_name = 'admin_init') C:\wamp64\www\Easy-Manage\wp-admin\admin.php:175
+[08-Mar-2023 11:14:43 UTC] PHP   4. WP_Hook->do_action($args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\plugin.php:517
+[08-Mar-2023 11:14:43 UTC] PHP   5. WP_Hook->apply_filters($value = '', $args = [0 => '']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:332
+[08-Mar-2023 11:14:43 UTC] PHP   6. send_frame_options_header() C:\wamp64\www\Easy-Manage\wp-includes\class-wp-hook.php:306
+[08-Mar-2023 11:14:43 UTC] PHP   7. header($header = 'X-Frame-Options: SAMEORIGIN') C:\wamp64\www\Easy-Manage\wp-includes\functions.php:6865
+[08-Mar-2023 11:14:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\includes\acf-value-functions.php:166) in C:\wamp64\www\Easy-Manage\wp-admin\admin-header.php on line 9
+[08-Mar-2023 11:14:44 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:44 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:44 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:605
+[08-Mar-2023 11:14:44 UTC] PHP   3. header($header = 'Content-Type: text/html; charset=UTF-8') C:\wamp64\www\Easy-Manage\wp-admin\admin-header.php:9
+[08-Mar-2023 11:14:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\includes\acf-value-functions.php:166) in C:\wamp64\www\Easy-Manage\wp-includes\option.php on line 1138
+[08-Mar-2023 11:14:44 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:44 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:44 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:605
+[08-Mar-2023 11:14:44 UTC] PHP   3. wp_user_settings() C:\wamp64\www\Easy-Manage\wp-admin\admin-header.php:86
+[08-Mar-2023 11:14:44 UTC] PHP   4. setcookie($name = 'wp-settings-1', $value = '', $expires_or_options = 1709810084, $path = '/Easy-Manage/', $domain = '', $secure = FALSE) C:\wamp64\www\Easy-Manage\wp-includes\option.php:1138
+[08-Mar-2023 11:14:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\wamp64\www\Easy-Manage\wp-content\plugins\advanced-custom-fields-pro-master\includes\acf-value-functions.php:166) in C:\wamp64\www\Easy-Manage\wp-includes\option.php on line 1139
+[08-Mar-2023 11:14:44 UTC] PHP Stack trace:
+[08-Mar-2023 11:14:44 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:0
+[08-Mar-2023 11:14:44 UTC] PHP   2. require_once() C:\wamp64\www\Easy-Manage\wp-admin\plugins.php:605
+[08-Mar-2023 11:14:44 UTC] PHP   3. wp_user_settings() C:\wamp64\www\Easy-Manage\wp-admin\admin-header.php:86
+[08-Mar-2023 11:14:44 UTC] PHP   4. setcookie($name = 'wp-settings-time-1', $value = 1678274084, $expires_or_options = 1709810084, $path = '/Easy-Manage/', $domain = '', $secure = FALSE) C:\wamp64\www\Easy-Manage\wp-includes\option.php:1139
+[09-Mar-2023 15:13:56 UTC] PHP Fatal error:  Uncaught TypeError: strpos(): Argument #1 ($haystack) must be of type string, array given in C:\wamp64\www\Easy-Manage\wp-includes\shortcodes.php:208
+Stack trace:
+#0 C:\wamp64\www\Easy-Manage\wp-includes\shortcodes.php(208): strpos(Array, '[')
+#1 C:\wamp64\www\Easy-Manage\wp-content\themes\Easy Manage Theme\page-login.php(7): do_shortcode(Array)
+#2 C:\wamp64\www\Easy-Manage\wp-includes\template-loader.php(106): include('C:\\wamp64\\www\\E...')
+#3 C:\wamp64\www\Easy-Manage\wp-blog-header.php(19): require_once('C:\\wamp64\\www\\E...')
+#4 C:\wamp64\www\Easy-Manage\index.php(17): require('C:\\wamp64\\www\\E...')
+#5 {main}
+  thrown in C:\wamp64\www\Easy-Manage\wp-includes\shortcodes.php on line 208
+[09-Mar-2023 18:03:40 UTC] PHP Fatal error:  Cannot redeclare login_failed() (previously declared in C:\wamp64\www\Easy-Manage\wp-content\themes\Easy Manage Theme\functions.php:147) in C:\wamp64\www\Easy-Manage\wp-content\themes\Easy Manage Theme\functions.php on line 402
+[09-Mar-2023 18:03:40 UTC] PHP Stack trace:
+[09-Mar-2023 18:03:40 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[09-Mar-2023 18:03:40 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[09-Mar-2023 18:03:40 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[09-Mar-2023 18:03:40 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[09-Mar-2023 18:03:40 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[09-Mar-2023 18:03:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\wamp64\www\Easy-Manage\wp-includes\class-wp-recovery-mode-email-service.php on line 372
+[09-Mar-2023 18:03:40 UTC] PHP Stack trace:
+[09-Mar-2023 18:03:40 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[09-Mar-2023 18:03:40 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[09-Mar-2023 18:03:40 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[09-Mar-2023 18:03:40 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[09-Mar-2023 18:03:40 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[09-Mar-2023 18:03:40 UTC] PHP   6. WP_Fatal_Error_Handler->handle() C:\wamp64\www\Easy-Manage\wp-includes\class-wp-fatal-error-handler.php:0
+[09-Mar-2023 18:03:40 UTC] PHP   7. WP_Recovery_Mode->handle_error($error = ['type' => 64, 'message' => 'Cannot redeclare login_failed() (previously declared in C:\\wamp64\\www\\Easy-Manage\\wp-content\\themes\\Easy Manage Theme\\functions.php:147)', 'file' => 'C:\\wamp64\\www\\Easy-Manage\\wp-content\\themes\\Easy Manage Theme\\functions.php', 'line' => 402]) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-fatal-error-handler.php:53
+[09-Mar-2023 18:03:40 UTC] PHP   8. WP_Recovery_Mode_Email_Service->maybe_send_recovery_mode_email($rate_limit = 86400, $error = ['type' => 64, 'message' => 'Cannot redeclare login_failed() (previously declared in C:\\wamp64\\www\\Easy-Manage\\wp-content\\themes\\Easy Manage Theme\\functions.php:147)', 'file' => 'C:\\wamp64\\www\\Easy-Manage\\wp-content\\themes\\Easy Manage Theme\\functions.php', 'line' => 402], $extension = ['type' => 'theme', 'slug' => 'Easy Manage Theme']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-recovery-mode.php:185
+[09-Mar-2023 18:03:40 UTC] PHP   9. WP_Recovery_Mode_Email_Service->send_recovery_mode_email($rate_limit = 86400, $error = ['type' => 64, 'message' => 'Cannot redeclare login_failed() (previously declared in C:\\wamp64\\www\\Easy-Manage\\wp-content\\themes\\Easy Manage Theme\\functions.php:147)', 'file' => 'C:\\wamp64\\www\\Easy-Manage\\wp-content\\themes\\Easy Manage Theme\\functions.php', 'line' => 402], $extension = ['type' => 'theme', 'slug' => 'Easy Manage Theme']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-recovery-mode-email-service.php:62
+[09-Mar-2023 18:03:40 UTC] PHP  10. WP_Recovery_Mode_Email_Service->get_debug($extension = ['type' => 'theme', 'slug' => 'Easy Manage Theme']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-recovery-mode-email-service.php:155
+[09-Mar-2023 18:03:40 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\wamp64\www\Easy-Manage\wp-includes\class-wp-recovery-mode-email-service.php on line 373
+[09-Mar-2023 18:03:40 UTC] PHP Stack trace:
+[09-Mar-2023 18:03:40 UTC] PHP   1. {main}() C:\wamp64\www\Easy-Manage\index.php:0
+[09-Mar-2023 18:03:40 UTC] PHP   2. require() C:\wamp64\www\Easy-Manage\index.php:17
+[09-Mar-2023 18:03:40 UTC] PHP   3. require_once() C:\wamp64\www\Easy-Manage\wp-blog-header.php:13
+[09-Mar-2023 18:03:40 UTC] PHP   4. require_once() C:\wamp64\www\Easy-Manage\wp-load.php:50
+[09-Mar-2023 18:03:40 UTC] PHP   5. require_once() C:\wamp64\www\Easy-Manage\wp-config.php:98
+[09-Mar-2023 18:03:40 UTC] PHP   6. WP_Fatal_Error_Handler->handle() C:\wamp64\www\Easy-Manage\wp-includes\class-wp-fatal-error-handler.php:0
+[09-Mar-2023 18:03:40 UTC] PHP   7. WP_Recovery_Mode->handle_error($error = ['type' => 64, 'message' => 'Cannot redeclare login_failed() (previously declared in C:\\wamp64\\www\\Easy-Manage\\wp-content\\themes\\Easy Manage Theme\\functions.php:147)', 'file' => 'C:\\wamp64\\www\\Easy-Manage\\wp-content\\themes\\Easy Manage Theme\\functions.php', 'line' => 402]) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-fatal-error-handler.php:53
+[09-Mar-2023 18:03:40 UTC] PHP   8. WP_Recovery_Mode_Email_Service->maybe_send_recovery_mode_email($rate_limit = 86400, $error = ['type' => 64, 'message' => 'Cannot redeclare login_failed() (previously declared in C:\\wamp64\\www\\Easy-Manage\\wp-content\\themes\\Easy Manage Theme\\functions.php:147)', 'file' => 'C:\\wamp64\\www\\Easy-Manage\\wp-content\\themes\\Easy Manage Theme\\functions.php', 'line' => 402], $extension = ['type' => 'theme', 'slug' => 'Easy Manage Theme']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-recovery-mode.php:185
+[09-Mar-2023 18:03:40 UTC] PHP   9. WP_Recovery_Mode_Email_Service->send_recovery_mode_email($rate_limit = 86400, $error = ['type' => 64, 'message' => 'Cannot redeclare login_failed() (previously declared in C:\\wamp64\\www\\Easy-Manage\\wp-content\\themes\\Easy Manage Theme\\functions.php:147)', 'file' => 'C:\\wamp64\\www\\Easy-Manage\\wp-content\\themes\\Easy Manage Theme\\functions.php', 'line' => 402], $extension = ['type' => 'theme', 'slug' => 'Easy Manage Theme']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-recovery-mode-email-service.php:62
+[09-Mar-2023 18:03:40 UTC] PHP  10. WP_Recovery_Mode_Email_Service->get_debug($extension = ['type' => 'theme', 'slug' => 'Easy Manage Theme']) C:\wamp64\www\Easy-Manage\wp-includes\class-wp-recovery-mode-email-service.php:155
