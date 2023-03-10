@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Projects
+ * Template Name: Projects Member
  */
 get_header();?>
 

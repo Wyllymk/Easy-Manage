@@ -7,6 +7,11 @@ get_header();?>
 <?php
  $users = get_users( array( 'role__in' => array( 'member' ) ) );
 
+ if ( isset( $_POST['activate_user'] ) && isset( $_POST['user_id'] ) ) {
+    $user_id = intval( $_POST['user_id'] );
+    update_user_meta( $user_id, 'registration_status', 'active' );
+    echo '<div class="alert alert-success">User activated successfully.</div>';
+}
 ?>
     <!-- Wrapper Start -->
     <div class="wrapper">
@@ -159,14 +164,8 @@ get_header();?>
                      </div>
                      <div class="col-sm-6 col-md-6">
                         <div class="user-list-files d-flex">
-                           <a class="bg-primary" href="javascript:void();">
+                           <a onclick="window.print()" class="bg-primary" href="">
                               Print
-                           </a>
-                           <a class="bg-primary" href="javascript:void();">
-                              Excel
-                           </a>
-                           <a class="bg-primary" href="javascript:void();">
-                              Pdf
                            </a>
                         </div>
                      </div>
@@ -188,18 +187,27 @@ get_header();?>
                      <tbody>
                     <?php
                      foreach ( $users as $user ) {
-                    
+                        $user_id = $user->ID;
+                        $username = $user->user_login;
+                        $display_name = $user->display_name;
+                        $email = $user->user_email;
+                        $user_register = $user->user_registered;
+                        $registration_status = get_user_meta( $user_id, 'registration_status', true );
                     ?>
                         <tr>
-                           <td><?php echo '<span>' . esc_html( $user->user_login ) . '</span>';?></td>
-                           <td><?php echo '<span>' . esc_html( $user->display_name ) . '</span>';?></td>
-                           <td><?php echo '<span>' . esc_html( $user->user_email ) . '</span>';?></td>
+                           <td><?php echo '<span>' . esc_html( $username ) . '</span>';?></td>
+                           <td><?php echo '<span>' . esc_html( $display_name ) . '</span>';?></td>
+                           <td><?php echo '<span>' . esc_html( $email ) . '</span>';?></td>
                            <td></td>
-                           <td><span class="badge bg-primary">Active</span></td>
+                           <td><span <?php if ($registration_status == 'pending') { echo'class="badge bg-danger"'; } ?> <?php if ($registration_status == 'active') { echo'class="badge text-bg-success"'; } ?> <?php if ($registration_status == 'Completed') { echo'class="badge text-bg-success"'; } ?>><?php echo esc_html( $registration_status);?></span></td>
                            <td>Acme Corporation</td>
-                           <td><?php echo '<span>' . esc_html( date( "d-m-Y", strtotime($user->user_registered ) ) ) . '</span>';?></td>
+                           <td><?php echo '<span>' . esc_html( date( "d-m-Y", strtotime($user_register ) ) ) . '</span>';?></td>
                            <td>
                               <div class="flex align-items-center list-user-action">
+                                <form action="" method="post">
+                                    <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+                                    <button class="btn btn-success"type="submit" name="activate_user">Activate</button>
+                                </form>
                                  <a class="btn btn-sm bg-primary" data-toggle="tooltip" data-placement="top" title=""
                                     data-original-title="Add" href="#"><i class="ri-user-add-line mr-0"></i></a>
                                  <a class="btn btn-sm bg-primary" data-toggle="tooltip" data-placement="top" title=""

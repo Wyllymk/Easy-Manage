@@ -393,7 +393,7 @@ function members_page_template($template) {
     if(!is_user_logged_in()) return $template;
   
     $current_page = get_queried_object();
-    if($current_page->post_name === 'members') { // modify only if the current page is 'dashboard'
+    if($current_page->post_name === 'members') { // modify only if the current page is 'members'
         $new_template = '';
         $current_user = wp_get_current_user();
         $user = new WP_User( $current_user->ID);
@@ -418,7 +418,7 @@ function projects_page_template($template) {
     if(!is_user_logged_in()) return $template;
   
     $current_page = get_queried_object();
-    if($current_page->post_name === 'projects') { // modify only if the current page is 'dashboard'
+    if($current_page->post_name === 'projects') { // modify only if the current page is 'projects'
         $new_template = '';
         $current_user = wp_get_current_user();
         $user = new WP_User( $current_user->ID);
@@ -443,7 +443,7 @@ function profile_page_template($template) {
     if(!is_user_logged_in()) return $template;
   
     $current_page = get_queried_object();
-    if($current_page->post_name === 'user-profile') { // modify only if the current page is 'dashboard'
+    if($current_page->post_name === 'user-profile') { // modify only if the current page is 'user-profile'
         $new_template = '';
         $current_user = wp_get_current_user();
         $user = new WP_User( $current_user->ID);
@@ -487,4 +487,32 @@ function wpb_recently_registered_users() {
     $wp_users .= '</ul>';
      
     return $wp_users;
+}
+
+add_filter( 'deprecated_constructor_trigger_error', '__return_false' );
+add_filter( 'deprecated_function_trigger_error', '__return_false' );
+add_filter( 'deprecated_file_trigger_error', '__return_false' );
+add_filter( 'deprecated_argument_trigger_error', '__return_false' );
+add_filter( 'deprecated_hook_trigger_error', '__return_false' );
+
+/**
+ * To prevent users with a registration status of "pending" from logging in
+ * you use the wp_authenticate_user filter to check the user's 
+ * registration status when they attempt to log in. If the user's status is "pending", 
+ * you prevent the login attempt and display an error message.
+ */
+function my_custom_authenticate_user( WP_User $user  ) {
+    if ( get_user_meta( $user->ID, 'registration_status', true ) === 'pending' ) {
+        remove_action( 'wp_authenticate_user', 'wp_authenticate_username_password', 20 );
+        add_filter( 'wp_authenticate_user', 'my_custom_login_error_message', 20, 3 );
+    }
+
+    return $user;
+}
+add_filter( 'wp_authenticate_user', 'my_custom_authenticate_user', 10, 1 );
+
+function my_custom_login_error_message( $username, $password ) {
+    $error = new WP_Error();
+    $error->add( 'pending', __( 'Your account is pending approval. Please try again later.' ) );
+    return $error;
 }

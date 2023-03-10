@@ -24,8 +24,10 @@ if(isset($_POST['signup'])){
             'user_pass'	           =>  $user_pass, // not necessary to hash password ( The plain-text user password ).
             'role'                 =>  'member', //give role of member
             'show_admin_bar_front' =>  false, // display the Admin Bar for the user 'true' or 'false'
+            'user_status'          =>  0, // set the user as inactive
             'meta_input' => array(
-                'verified' => false, // add a custom field to mark the user as unverified
+               'registration_status' => 'pending', // add custom field to mark the user as unverified
+               'verified' => false, // add a custom field to mark the user as unverified
             )
         );
         

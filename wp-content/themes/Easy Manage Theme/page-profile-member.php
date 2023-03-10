@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: User Profile
+ * Template Name: User Profile Member
  */
 get_header();?>
 

@@ -17,6 +17,11 @@ class CustomFunctions{
         add_action( 'login_enqueue_scripts', array($this, 'wpb_login_logo') );
         add_action('template_redirect', array($this, 'my_non_logged_redirect'));
 
+        // add_filter( 'deprecated_constructor_trigger_error', '__return_false' );
+        // add_filter( 'deprecated_function_trigger_error', '__return_false' );
+        // add_filter( 'deprecated_file_trigger_error', '__return_false' );
+        // add_filter( 'deprecated_argument_trigger_error', '__return_false' );
+        // add_filter( 'deprecated_hook_trigger_error', '__return_false' );
     }
 
     
@@ -29,7 +34,7 @@ class CustomFunctions{
             //check for admins
             if ( in_array( 'administrator', $user->roles ) ) {
                 // redirect them to the default place
-                return $redirect_to;
+                return esc_url(home_url( '/dashboard'));
             } else {
                 return esc_url(home_url( '/dashboard'));
             }
@@ -94,7 +99,7 @@ class CustomFunctions{
     function wpb_login_logo() { ?>
         <style type="text/css">
             #login h1 a, .login h1 a {
-            background-image: url(http://localhost/Easy-Manage/wp-content/uploads/2023/03/download.png);
+            background-image: url(https://easy-manage.com/wp-content/uploads/2023/03/download-1.png);
             height:300px;
             width:300px;
             background-size: 300px 300px;
@@ -117,5 +122,10 @@ class CustomFunctions{
             die();
         }
     } 
+
+  
+
+   
+    
 
 }

@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Members
+ * Template Name: Members Member
  */
 get_header();?>
 
@@ -157,12 +157,6 @@ get_header();?>
                         <div class="user-list-files d-flex">
                            <a class="bg-primary" href="javascript:void();">
                               Print
-                           </a>
-                           <a class="bg-primary" href="javascript:void();">
-                              Excel
-                           </a>
-                           <a class="bg-primary" href="javascript:void();">
-                              Pdf
                            </a>
                         </div>
                      </div>
