@@ -36,12 +36,12 @@ if (isset($_POST['login'])) {
             <div class="row align-items-center justify-content-center height-self-center">
                 <div class="col-lg-8">
                 <?php if (!empty($errors)): ?>
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: inline-block; width:100%;  white-space: nowrap;">
                         
                         <?php foreach ($errors as $error): ?>
                             &nbsp; <?php echo $error; ?>
                         <?php endforeach; ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        
                     </div>
                 <?php endif; ?>
                     <div class="card auth-card">

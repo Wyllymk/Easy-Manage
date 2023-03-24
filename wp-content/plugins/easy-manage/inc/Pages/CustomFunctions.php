@@ -16,6 +16,7 @@ class CustomFunctions{
         add_action( 'login_init', array($this, 'custom_login_page') );
         add_action( 'admin_init', array($this, 'restrict_dashboard_access') );
         add_action( 'wp_login', array($this, 'update_user_location_on_login'), 10, 2 );
+        add_action( 'login_form_lostpassword', array ($this, 'custom_lost_password_page') );
     }
 
     
@@ -66,6 +67,17 @@ class CustomFunctions{
             exit();
         }
     }
+
+    // Redirect users to custom lost password page
+    function custom_lost_password_page() {
+        if ( 'GET' == $_SERVER['REQUEST_METHOD'] ) {
+            if ( ! is_user_logged_in() ) {
+                wp_redirect( site_url( '/lost-password/' ) );
+                exit;
+            }
+        }
+    }
+    
      
     //This piece of code restricts the wp-admin from all users except administrator
     function restrict_dashboard_access() {
