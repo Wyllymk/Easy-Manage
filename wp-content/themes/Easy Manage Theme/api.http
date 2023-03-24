@@ -1,12 +1,17 @@
 ### converting project to json
 
-GET http://localhost/project/wp-json/wp/v2/posts
+GET https://easy-manage.com/wp-json/projects/v1/api
+Content-Type: application/json,
+Authorization: Basic admin:64pq IIA6 Z8Ot p7fX 2yg0 lCi8'
+
 
 ### Using post method
-POST http://localhost/project/wp-json/jwt-auth/v1/token
+POST https://easy-manage.com/wp-json/jwt-auth/v1/token
 Content-Type: application/json
 
 {
     "username": "admin",
     "password": "admin1234"
 }
+###GET Custom Route
+GET https://easy-manage.com/wp-json/contact/v1/api

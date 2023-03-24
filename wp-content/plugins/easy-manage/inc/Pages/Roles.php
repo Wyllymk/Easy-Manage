@@ -24,7 +24,11 @@ class Roles{
     
         // Add the custom role with the capabilities of an author
         add_role( 'member', 'Member', $capabilities );
-        //remove_role( 'member' );
+        remove_role( 'subscriber' );
+        remove_role( 'contributor' );
+        remove_role( 'author' );
+        remove_role( 'editor' );
+
     }
 
     // Define the custom role and its capabilities

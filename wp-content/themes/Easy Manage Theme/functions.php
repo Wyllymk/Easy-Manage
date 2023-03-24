@@ -3,12 +3,12 @@
 /*                        REGISTER CUSTOM NAVIGATION WALKER                */
 /*-------------------------------------------------------------------------*/
 
-if ( ! file_exists( get_template_directory() . '/class-bootstrap-5-navwalker.php' ) ) {
+if ( ! file_exists( get_template_directory() . '/inc/class-bootstrap-5-navwalker.php' ) ) {
     // File does not exist... return an error.
     return new WP_Error( 'class-bootstrap-5-navwalker-missing', __( 'It appears the class-bootstrap-5-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
 } else {
     // File exists... require it.
-    require_once get_template_directory() . '/class-bootstrap-5-navwalker.php';
+    require_once get_template_directory() . '/inc/class-bootstrap-5-navwalker.php';
 }
 
 /*-------------------------------------------------------------------------*/
@@ -22,6 +22,8 @@ function wp_custom_styles(){
     wp_enqueue_style('wpb-google-fonts' );
     wp_register_style('boxicons', 'https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css', array(), '1.0.0', 'all');
     wp_enqueue_style('boxicons');
+    wp_register_style('line-awesome', get_template_directory_uri().'/assets/css/line-awesome/dist/line-awesome/css/line-awesome.min.css', array(), '1.0.0', 'all');
+    wp_enqueue_style('line-awesome');
 
     //dash
     wp_register_style('backend', get_template_directory_uri().'/assets/css/backend.css', array(), '1.0.0', 'all');
@@ -62,6 +64,12 @@ function wp_custom_scripts(){
     wp_enqueue_script('backend-js');
 }
 add_action('wp_enqueue_scripts', 'wp_custom_scripts');
+
+//enqueue google maps
+function add_google_maps_api() {
+    wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDrgGXICRk_yPMowMpFJHWZLVlhXb7GCnQ', array(), null, true);
+  }
+  add_action('wp_enqueue_scripts', 'add_google_maps_api');
 /*-------------------------------------------------------------------------*/
 /*                        REGISTER WIDGETS AND MENUS                       */
 /*-------------------------------------------------------------------------*/
@@ -114,9 +122,10 @@ function custom_theme_setup() {
 
 	add_theme_support('custom-background');
 
-	add_theme_support('post-formats', array('aside', 'image', 'video'));
+    add_theme_support( 'post-formats', array( 'aside', 'gallery', 'quote', 'image', 'video' ) );
 }
 add_action( 'after_setup_theme', 'custom_theme_setup' );
+
 
 /*-------------------------------------------------------------------------*/
 /*                        ADD THEME SUPPORT                                */
@@ -199,69 +208,264 @@ function time_to_go($timestamp){
     }
 }
 /*-------------------------------------------------------------------------*/
-/*                        CREATE CUSTOM FIELDS API                         */
+/*                        CREATE REST ROUTE API                            */
 /*-------------------------------------------------------------------------*/
-function custom_rest_api(){
-    register_rest_field(
-        'post',
-        'custom_field',
+function register_rest_api_routes() {
+    // READ route for retrieving projects
+    register_rest_route(
+        'projects/v1',
+        'api(/(?P<id>\d+))?',
         array(
-            'get_callback' => 'get_custom_field'
-        ),
-    );
-    register_rest_route( 
-        'taskbook/v1', 
-        'posttypes', 
-        array(
-        'callback' => 'get_tasks',
-        'method'=>'GET',
-        'permission_callback' => 'custom_endpoint_permission',
-        'args' => array(
-            'meta_key' => [
-                'required' => true,
-                'validate_callback' => function($param, $request, $key){
-                    return !is_numeric($param);
-                }
-            ],
-            'meta_value' => [
-                'required' => true,
-                'default'=>1,
-                'validate_callback' => function($param, $request, $key){
-                    return is_numeric($param);
-                }
-            ]
+            'methods'  => WP_REST_Server::READABLE,
+            'callback' => 'get_projects',
+            'permission_callback' => 'custom_endpoint_permission',
+            'args'     => array(
+                'id' => array(
+                    'validate_callback' => 'rest_validate_request_arg',
+                ),
             ),
-            'schema' => 'custom_get_post_schema'
-    ) );
+        )
+    );
+
+     // CREATE route for adding new projects
+     register_rest_route(
+        'projects/v1',
+        'api',
+        array(
+            'methods'  => WP_REST_Server::CREATABLE,
+            'callback' => 'create_project',
+            'permission_callback' => function () {
+                return current_user_can( 'edit_posts' );
+            },
+            'args'     => array(
+                'post_title' => array(
+                    'required'          => true,
+                    'validate_callback' => 'rest_validate_request_arg',
+                ),
+                'post_content' => array(
+                    'required'          => true,
+                    'validate_callback' => 'rest_validate_request_arg',
+                ),
+                'project_status' => array(
+                    'required'          => true,
+                    'validate_callback' => 'rest_validate_request_arg',
+                ),
+                'project_genre' => array(
+                    'required'          => true,
+                    'validate_callback' => 'rest_validate_request_arg',
+                ),
+
+                'project_deadline' => array(
+                    'required'          => true,
+                    'validate_callback' => 'rest_validate_request_arg',
+                ),
+                'user_assigned' => array(
+                    'required'          => true,
+                    'validate_callback' => 'rest_validate_request_arg',
+                ),
+            ),
+        )
+    );
+
+    // UPDATE route for adding new projects
+    register_rest_route(
+        'projects/v1',
+        'api/(?P<id>\d+)',
+        array(
+            'methods'  => WP_REST_Server::EDITABLE,
+            'callback' => 'update_project',
+            'args'     => array(
+                'id' => array(
+                    'validate_callback' => 'rest_validate_request_arg',
+                ),
+                'post_title' => array(
+                    'required'          => true,
+                    'validate_callback' => 'rest_validate_request_arg',
+                ),
+                'post_content' => array(
+                    'required'          => true,
+                    'validate_callback' => 'rest_validate_request_arg',
+                ),
+                'project_status' => array(
+                    'required'          => true,
+                    'validate_callback' => 'rest_validate_request_arg',
+                ),
+                'project_deadline' => array(
+                    'required'          => true,
+                    'validate_callback' => 'rest_validate_request_arg',
+                ),
+                'user_assigned' => array(
+                    'required'          => true,
+                    'validate_callback' => 'rest_validate_request_arg',
+                ),
+            ),
+        )
+    );
+
+    // DELETE route for retrieving projects
+    register_rest_route(
+        'projects/v1',
+        'api/(?P<id>\d+)?',
+        array(
+            'methods'  => WP_REST_Server::DELETABLE,
+            'callback' => 'delete_project',
+            'permission_callback' => function () {
+                return current_user_can( 'manage_options' );
+            },
+            'args'     => array(
+                'id' => array(
+                    'validate_callback' => 'rest_validate_request_arg',
+                ),
+            ),
+        )
+    );
 }
 
-function custom_get_post_schema(){
-    $schema = array(
-        'schema'   => '',
-        'title'=>  'all-portfolios',
-        'type'=>    'object',
-        'properties'=> [
-            'id'=>[
-                'description'=>esc_html__('Unique identifier for the object', 'my-textdomain'),
-                'type'=>'integer'
-            ],
-            'author'=>[
-                'description'=>esc_html__('The ID of the object', 'my-textdomain'),
-                'type'=>'integer'
-            ],
-            'creation_date'=>[
-                'description'=>esc_html__('The date of creation of the object', 'my-textdomain'),
-                'type'=>'string'
-            ],
-            'title'=>[
-                'description'=>esc_html__('The title of the object', 'my-textdomain'),
-                'type'=>'string'
-            ],
-            'content'=>[
-                'description'=>esc_html__('The content of the object', 'my-textdomain'),
-                'type'=>'string'
-            ],
-        ]
+function get_projects( $request ) {
+    $args = array(
+        'post_type'      => 'project',
+        'posts_per_page' => -1,
+        'status'         => 'publish',
+    );
+
+    if ( isset( $request['id'] ) ) {
+        $args['p'] = $request['id'];
+    }
+
+    $new_query = new WP_Query( $args );
+
+    $projects = $new_query->posts;
+
+    if ( empty( $projects ) ) {
+        return new WP_Error(
+            'no_data_found',
+            'No Data Found',
+            array(
+                'status' => 404,
+            )
+        );
+    }
+
+    $result = array();
+
+    foreach ( $projects as $project ) {
+        $project_data = array(
+            'post_ID'          => $project->ID,
+            'post_title'       => $project->post_title,
+            'post_content'     => $project->post_content,
+            'project_status'   => get_post_meta( $project->ID, 'project_status', true ),
+            'project_deadline' => get_post_meta( $project->ID, 'project_deadline', true ),
+            'user_assigned'    => get_post_meta( $project->ID, 'user_assigned', true ),
+        );
+
+        $result[] = $project_data;
+    }
+
+    return $result;
+}
+
+function create_project( $request ) {
+    $post_title = $request->get_param( 'post_title' );
+    $post_content = $request->get_param( 'post_content' );
+    $project_status = $request->get_param( 'project_status' );
+    $project_genre = $request->get_param( 'project_genre' );
+    $project_deadline = $request->get_param( 'project_deadline' );
+    $user_assigned = $request->get_param( 'user_assigned' );
+
+    $post_data = array(
+        'post_title'   => $post_title,
+        'post_content' => $post_content,
+        'post_status'  => 'publish',
+        'post_type'    => 'project'
+    );
+
+    $post_id = wp_insert_post( $post_data );
+
+    if ( ! is_wp_error( $post_id ) ) {
+        // Save custom meta data
+        update_post_meta( $post_id, 'project_status', $project_status );
+        update_post_meta( $post_id, 'project_genre', $project_status );
+        update_post_meta( $post_id, 'project_deadline', $project_deadline );
+        update_post_meta( $post_id, 'user_assigned', $user_assigned );
+
+        return array( 'success' => true );
+    } else {
+        return new WP_Error(
+            'create_error',
+            'Error creating project post',
+            array( 'status' => 500 )
+        );
+    }
+}
+
+function update_project( $request ) {
+    $id = $request->get_param( 'id' );
+
+    if ( empty( $id ) ) {
+        return new WP_Error(
+            'missing_id',
+            'Missing ID parameter',
+            array(
+                'status' => 400,
+            )
+        );
+    }
+
+    $project = get_post( $id );
+
+    if ( empty( $project ) ) {
+        return new WP_Error(
+            'invalid_id',
+            'Invalid ID parameter',
+            array(
+                'status' => 404,
+            )
+        );
+    }
+
+    $title = $request->get_param( 'post_title' );
+    $content = $request->get_param( 'post_content' );
+    $status = $request->get_param( 'project_status' );
+    $deadline = $request->get_param( 'project_deadline' );
+    $user_assigned = $request->get_param( 'user_assigned' );
+
+    $update_args = array(
+        'ID'           => $id,
+        'post_title'   => $title,
+        'post_content' => $content,
+    );
+
+    update_post_meta( $id, 'project_status', $status );
+    update_post_meta( $id, 'project_deadline', $deadline );
+    update_post_meta( $id, 'user_assigned', $user_assigned );
+
+    $updated = wp_update_post( $update_args );
+
+    if ( is_wp_error( $updated ) ) {
+        return $updated;
+    }
+
+    return array(
+        'success' => true,
+    );
+}
+
+function delete_project( $request ) {
+    $post_id = $request['id'];
+
+    if ( ! $post_id || ! is_numeric( $post_id ) ) {
+        return new WP_Error( 'invalid_post_id', 'Invalid post ID.', array( 'status' => 400 ) );
+    }
+
+    $result = wp_trash_post( $post_id, true );
+
+    if ( ! $result ) {
+        return new WP_Error( 'post_not_deleted', 'The post could not be deleted.', array( 'status' => 500 ) );
+    }
+
+    return array(
+        'status'  => 'success',
+        'message' => 'The post has been moved to the trash successfully.',
     );
 }
 
@@ -273,93 +477,8 @@ function custom_endpoint_permission(){
     }
 }
 
-function get_tasks(WP_REST_Request $request){
-    echo '<pre>';
-    print_r($request);
-    echo '</pre>';
-
-    $meta_key = $request->get_param('meta_key');
-    $meta_value = $request->get_param('meta_value');
-
-    $args = array(
-        'post_type' => 'tasks',
-        'status'    =>  'publish',
-        'posts_per_page'    =>  10,
-        'meta_query'    =>  array(
-            [
-                'key'=>$meta_key,
-                'value'=>$meta_value
-            ]) 
-    );
-
-    $the_query = new WP_Query($args);
-
-    $tasks = $the_query->posts;
-
-    if(empty($tasks)){
-        return new WP_Error(
-            'no_data_found',
-            'No Data Found',
-            [
-                'status'=>404
-            ],
-        );
-    }
-
-    foreach($tasks as $task){
-        $response = custom_rest_prepare_post($task, $request);
-        $data[] = custom_prepare_for_collection($response);
-    }
-
-    return rest_ensure_response($data);
-    
-}
-
-
-function custom_rest_prepare_post($post, $request){
-    $post_data = [];
-    $schema = custom_get_post_schema();
-
-    if(isset($schema['properties']['id'])){
-        $post_data['id'] = (int) $post->ID;
-    }
-
-    if(isset($Schema['properties']['author'])){
-        $post_data['author'] = (int) $post->post_author;
-    }
-    if(isset($Schema['properties']['title'])){
-        $post_data['title'] =  apply_filters('post_heading', $post->post_title, $post);
-    }
-    if(isset($Schema['properties']['content'])){
-        $post_data['content'] =  apply_filters('post_text', $post->post_content, $post);
-    }
-    if(isset($Schema['properties']['creation_date'])){
-        $post_data['creation_date'] =  apply_filters('post_date', $post->post_date, $post);
-    }
-    return rest_ensure_response($post_data);
-}
-
-function custom_prepare_for_collection($response){
-    if(!($response instanceof WP_REST_Response)){
-        return $response;
-    }
-
-    $data = (array) $response->get_data();
-    $links = rest_get_server()::get_compact_response_links($response);
-
-    if(!empty($links)){
-        $data['_links'] = $links;
-    }
-
-    return $data;
-}
-
-function get_custom_field($object, $field_name){
-    $post_id = $object['id'];
-   // echo '<pre>';print_r($object); echo'</pre>';
-    return get_post_meta($post_id, 'Custom Field', true);
-}
-add_action('rest_api_init', 'custom_rest_api');
+add_action( 'rest_api_init', 'register_rest_api_routes' );
+ 
 
 /*-------------------------------------------------------------------------*/
 /*             SHOW DIFFERENT DASHBOARD DEPENDING ON USER                  */
@@ -374,10 +493,10 @@ function dashboard_page_template($template) {
         $user = new WP_User( $current_user->ID);
 
         if(in_array('project_manager', $user->roles) || in_array('administrator', $user->roles)){
-            $new_template = locate_template( array( 'page-dashboard.php' ) );
+            $new_template = locate_template( array( 'page-templates/page-dashboard.php' ) );
         }
         elseif(in_array('member', $user->roles)){
-            $new_template = locate_template( array( 'page-dashboard-member.php' ) );
+            $new_template = locate_template( array( 'page-templates/page-dashboard-member.php' ) );
         }else{
             $new_template = locate_template( array( 'front-page.php' ) );
         }
@@ -399,10 +518,10 @@ function members_page_template($template) {
         $user = new WP_User( $current_user->ID);
 
         if(in_array('project_manager', $user->roles) || in_array('administrator', $user->roles)){
-            $new_template = locate_template( array( 'page-members.php' ) );
+            $new_template = locate_template( array( 'page-templates/page-members.php' ) );
         }
         elseif(in_array('member', $user->roles)){
-            $new_template = locate_template( array( 'page-members-member.php' ) );
+            $new_template = locate_template( array( 'page-templates/page-members-member.php' ) );
         }else{
             $new_template = locate_template( array( 'front-page.php' ) );
         }
@@ -424,10 +543,10 @@ function projects_page_template($template) {
         $user = new WP_User( $current_user->ID);
 
         if(in_array('project_manager', $user->roles) || in_array('administrator', $user->roles)){
-            $new_template = locate_template( array( 'page-projects.php' ) );
+            $new_template = locate_template( array( 'page-templates/page-projects.php' ) );
         }
         elseif(in_array('member', $user->roles)){
-            $new_template = locate_template( array( 'page-projects-member.php' ) );
+            $new_template = locate_template( array( 'page-templates/page-projects-member.php' ) );
         }else{
             $new_template = locate_template( array( 'front-page.php' ) );
         }
@@ -449,10 +568,10 @@ function profile_page_template($template) {
         $user = new WP_User( $current_user->ID);
 
         if(in_array('project_manager', $user->roles) || in_array('administrator', $user->roles)){
-            $new_template = locate_template( array( 'page-profile.php' ) );
+            $new_template = locate_template( array( 'page-templates/page-profile.php' ) );
         }
         elseif(in_array('member', $user->roles)){
-            $new_template = locate_template( array( 'page-profile-member.php' ) );
+            $new_template = locate_template( array( 'page-templates/page-profile-member.php' ) );
         }else{
             $new_template = locate_template( array( 'front-page.php' ) );
         }
@@ -464,45 +583,40 @@ function profile_page_template($template) {
 }
 add_filter( 'template_include', 'profile_page_template' );
 
-function wpb_recently_registered_users() { 
- 
-    global $wpdb;
-     
-    $wp_users = '<ul class="recently-user">';
-     
-    $usernames = $wpdb->get_results("SELECT user_nicename, user_url, user_email FROM $wpdb->users WHERE user_login != 'admin' ORDER BY ID DESC LIMIT 5");
-     
-    foreach ($usernames as $username) {
-     
-    if (!$username->user_url) :
-     
-    $wp_users .= '<li>' .get_avatar($username->user_email, 45) .$username->user_nicename."</a></li>";
-     
-    else :
-     
-    $wp_users .= '<li>' .get_avatar($username->user_email, 45).'<a href="'.$username->user_url.'">'.$username->user_nicename."</a></li>";
-     
-    endif;
-    }
-    $wp_users .= '</ul>';
-     
-    return $wp_users;
-}
 
-add_filter( 'deprecated_constructor_trigger_error', '__return_false' );
-add_filter( 'deprecated_function_trigger_error', '__return_false' );
-add_filter( 'deprecated_file_trigger_error', '__return_false' );
-add_filter( 'deprecated_argument_trigger_error', '__return_false' );
-add_filter( 'deprecated_hook_trigger_error', '__return_false' );
+function projects_completed_page_template($template) {
+    if(!is_user_logged_in()) return $template;
+  
+    $current_page = get_queried_object();
+    if($current_page->post_name === 'projects-completed') { // modify only if the current page is 'projects'
+        $new_template = '';
+        $current_user = wp_get_current_user();
+        $user = new WP_User( $current_user->ID);
+
+        if(in_array('project_manager', $user->roles) || in_array('administrator', $user->roles)){
+            $new_template = locate_template( array( 'page-templates/page-projects-completed.php' ) );
+        }
+        elseif(in_array('member', $user->roles)){
+            $new_template = locate_template( array( 'page-templates/page-projects-member-completed.php' ) );
+        }else{
+            $new_template = locate_template( array( 'front-page.php' ) );
+        }
+        if ( '' != $new_template ) {
+            $template = $new_template;
+        }
+    }
+    return $template;
+}
+add_filter( 'template_include', 'projects_completed_page_template' );
 
 /**
- * To prevent users with a registration status of "pending" from logging in
+ * To prevent users with a registration status of "inactive" from logging in
  * you use the wp_authenticate_user filter to check the user's 
- * registration status when they attempt to log in. If the user's status is "pending", 
+ * registration status when they attempt to log in. If the user's status is "inactive", 
  * you prevent the login attempt and display an error message.
  */
 function my_custom_authenticate_user( WP_User $user  ) {
-    if ( get_user_meta( $user->ID, 'registration_status', true ) === 'pending' ) {
+    if ( get_user_meta( $user->ID, 'registration_status', true ) === 'inactive' ) {
         remove_action( 'wp_authenticate_user', 'wp_authenticate_username_password', 20 );
         add_filter( 'wp_authenticate_user', 'my_custom_login_error_message', 20, 3 );
     }
@@ -513,6 +627,8 @@ add_filter( 'wp_authenticate_user', 'my_custom_authenticate_user', 10, 1 );
 
 function my_custom_login_error_message( $username, $password ) {
     $error = new WP_Error();
-    $error->add( 'pending', __( 'Your account is pending approval. Please try again later.' ) );
+    $error->add( 'inactive', __( 'Your account is pending approval. Please try again later.' ) );
     return $error;
 }
+
+  

@@ -39,3 +39,33 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // Your code to run since DOM is loaded and ready
 });
+
+// Get the user's current location using HTML5 geolocation
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var lat = position.coords.latitude;
+      var lng = position.coords.longitude;
+  
+      // Use AJAX to update the user's location meta data
+      jQuery.ajax({
+        type: 'POST',
+        url: ajaxurl,
+        data: {
+          action: 'update_user_location',
+          lat: lat,
+          lng: lng
+        },
+        success: function(response) {
+          // Do something on success
+        },
+        error: function() {
+          // Handle error
+        }
+      });
+    }, function() {
+      // Handle geolocation error
+    });
+  } else {
+    // Geolocation is not supported by the browser
+  }
+  

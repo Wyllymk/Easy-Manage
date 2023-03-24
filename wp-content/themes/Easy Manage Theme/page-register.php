@@ -26,7 +26,7 @@ if(isset($_POST['signup'])){
             'show_admin_bar_front' =>  false, // display the Admin Bar for the user 'true' or 'false'
             'user_status'          =>  0, // set the user as inactive
             'meta_input' => array(
-               'registration_status' => 'pending', // add custom field to mark the user as unverified
+               'registration_status' => 'inactive', // add custom field to mark the user as unverified
                'verified' => false, // add a custom field to mark the user as unverified
             )
         );
@@ -36,7 +36,7 @@ if(isset($_POST['signup'])){
         if ( ! is_wp_error( $user_id ) ) {
             
             $success_message  = '<div class="alert alert-success alert-dismissible fade show" role="alert">';
-            $success_message .= 'User '. $user_id. ' has been successfully registered.';
+            $success_message .= 'The account for '. $user_login. ' has been successfully registered.';
             $success_message .= '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
             $success_message .= '</div>';
 
@@ -50,7 +50,7 @@ if(isset($_POST['signup'])){
             $message .= site_url('/registration-approval/') . '?user_id=' . $user_id . '&action=approve\n\n';
             $message .= 'Thank you';
 
-            update_user_meta($user_id, 'registration_status', 'pending');
+            update_user_meta($user_id, 'registration_status', 'inactive');
             
             wp_mail($to, $subject, $message);
 
@@ -126,7 +126,7 @@ if(isset($_POST['signup'])){
                                     </div>
                                     <button type="submit" class="btn btn-white" name="signup">Sign Up</button>
                                     <p class="mt-3">
-                                       Already have an Account <a href="<?php echo esc_url(wp_login_url(get_permalink())); ?>" class="text-white text-underline">Sign In</a>
+                                       Already have an Account <a href="<?php echo esc_url(site_url('/login/')); ?>" class="text-white text-underline">Sign In</a>
                                     </p>
                                  </form>
                               </div>

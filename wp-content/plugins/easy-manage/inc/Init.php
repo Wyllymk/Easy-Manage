@@ -16,6 +16,8 @@ final class Init{
             Pages\CustomFunctions::class,
             Pages\Roles::class,
             Pages\CPT::class,
+            Pages\REST::class,
+            Pages\WP_REST_Posts_Controller::class
         ];
     }
 

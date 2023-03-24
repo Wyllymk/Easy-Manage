@@ -38,7 +38,8 @@
           <li class="nav-item">
             <a class="nav-link" href="#scrollspyContact" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar">Contact</a>
           </li>
-          <a class="btn btn-primary px-5 align-self-center" href="../Easy-manage/register" role="button">Sign Up</a>
+          <a class="btn btn-primary px-5 align-self-center" href="<?php echo esc_url(site_url('/register/')); ?>" role="button">Sign Up</a>
+          <a class="btn btn-outline-primary px-5 align-self-center" href="<?php echo esc_url(site_url('/login/')); ?>" role="button">Login</a>
         </ul>
       </div>
     </div>
@@ -55,7 +56,7 @@
       <h1 class="display-3 fw-bolder mb-3">We provide easy <span class="wave-font-hw display-2 text-danger text-accent fw-normal">solutions</span>   for startups at affordable rates.</h1>
       <p class="fs-4 mb-5">Our methods are straight, comfortable, and established to ensure evolution and acceleration.</p>
       <div class="d-grid gap-2 d-sm-flex">
-        <a class="btn btn-primary rounded-pill gap-3 px-4" href="../Easy-Manage/register" role="button">Get Started</a>
+        <a class="btn btn-primary rounded-pill gap-3 px-4" href="<?php echo esc_url(site_url('/register/')); ?>" role="button">Get Started</a>
         <a class="btn btn-outline-primary rounded-pill gap-3 px-4" href="#scrollspyContact" role="button">Contact Us</a>
       </div>
     </div>
@@ -431,7 +432,7 @@
       </div>
 
       <div class="col-lg-8">
-        <form action="" method="post" role="form" class="">
+        <form action="" method="post" class="form">
           <div class="row">
             <div class="col-md-6 form-group">
               <input type="text" name="name" class="form-control form-control-lg" id="name" placeholder="Your Name" required>
@@ -466,7 +467,7 @@
   <div class="container">
     <div class="row">
       <div class="copyright text-center text-md-center">
-          &copy; 2023. All Rights Reserved. Built by <a href="https://bootstrapbrain.com/" class="link-secondary text-decoration-none">Wilson</a> with <span class="text-primary">&#9829;</span>
+          &copy; 2023. All Rights Reserved. Built by <a href="https://github.com/Wyllymk" class="link-secondary text-decoration-none">Wilson</a> with <span class="text-primary">&#9829;</span>
       </div>
     </div>
   </div>

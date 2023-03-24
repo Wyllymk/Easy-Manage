@@ -12,16 +12,10 @@ class CustomFunctions{
     public function register(){
         add_filter( 'login_redirect', array($this, 'my_login_redirect'), 10, 3);
         add_action('after_setup_theme', array($this, 'remove_admin_bar'));
-        // add_action( 'save_post_project', array($this, 'save_project_user'), 10, 3 );
-        // add_filter( 'user_has_cap', array($this, 'check_project_user_capability'), 10, 4 );
-        add_action( 'login_enqueue_scripts', array($this, 'wpb_login_logo') );
         add_action('template_redirect', array($this, 'my_non_logged_redirect'));
-
-        // add_filter( 'deprecated_constructor_trigger_error', '__return_false' );
-        // add_filter( 'deprecated_function_trigger_error', '__return_false' );
-        // add_filter( 'deprecated_file_trigger_error', '__return_false' );
-        // add_filter( 'deprecated_argument_trigger_error', '__return_false' );
-        // add_filter( 'deprecated_hook_trigger_error', '__return_false' );
+        add_action( 'login_init', array($this, 'custom_login_page') );
+        add_action( 'admin_init', array($this, 'restrict_dashboard_access') );
+        add_action( 'wp_login', array($this, 'update_user_location_on_login'), 10, 2 );
     }
 
     
@@ -51,64 +45,6 @@ class CustomFunctions{
         }
     }
 
-    // Save assigned user as post meta when a project is created or updated
-    function save_project_user( $post_id, $post, $update ) {
-        // Check if the current user is a project manager or administrator
-        if ( !current_user_can( 'edit_post', $post_id ) ) {
-            return;
-        }
-
-        // Check if the "project_user" field is set
-        if ( isset( $_POST['project_user'] ) ) {
-            // Sanitize the user ID
-            $assigned_user = sanitize_text_field( $_POST['project_user'] );
-
-            // Update the "assigned_user" post meta
-            update_post_meta( $post_id, 'assigned_user', $assigned_user );
-        }
-    }
-
-    function check_project_user_capability( $allcaps, $caps, $args, $user ) {
-        global $post;
-      
-        // Make sure we have a post object
-        if ( ! isset( $post ) ) {
-          return $allcaps;
-        }
-      
-        // Get the assigned user ID from the project meta
-        $assigned_user_id = get_post_meta( $post->ID, 'project_user', true );
-      
-        // Get the current user
-        $current_user = wp_get_current_user();
-      
-        // Check if the current user is the project manager or the assigned user
-        if ( in_array( 'project_manager', $current_user->roles ) || $assigned_user_id == $current_user->ID ) {
-          // Allow project manager and assigned user to view the project
-          return $allcaps;
-        }
-      
-        // Deny access to other users
-        $allcaps['read_private_posts'] = false;
-        return $allcaps;
-      }
-
-    /*
-    *   Change Logo in login page
-    */
-    function wpb_login_logo() { ?>
-        <style type="text/css">
-            #login h1 a, .login h1 a {
-            background-image: url(https://easy-manage.com/wp-content/uploads/2023/03/download-1.png);
-            height:300px;
-            width:300px;
-            background-size: 300px 300px;
-            background-repeat: no-repeat;
-            padding-bottom: 10px;
-            }
-        </style>
-    <?php }
-
     /*
     *   Restrict non logged users to certain pages
     */
@@ -116,16 +52,46 @@ class CustomFunctions{
     
     function my_non_logged_redirect()
     {
-        if ((is_page('dashboard') || is_page('projects')|| is_page('members') || is_page('user-profile')) && !is_user_logged_in() )
+        if ((is_page('dashboard') || is_page('projects') || is_page('projects-completed') || is_page('projects-in-progress')  || is_page('members') || is_page('messages')|| is_page('user-profile') || is_page('emails') || is_page('location')) && !is_user_logged_in() )
         {
             wp_redirect( home_url() );
             die();
         }
     } 
 
-  
+    // Redirect users to custom login page
+    function custom_login_page() {
+        if ( ! is_user_logged_in() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
+            wp_redirect( site_url( '/login/' ) );
+            exit();
+        }
+    }
+     
+    //This piece of code restricts the wp-admin from all users except administrator
+    function restrict_dashboard_access() {
+        if ( is_admin() && ! current_user_can( 'manage_options' ) ) {
+            wp_redirect( home_url('/dashboard/') );
+            exit;
+        }
+    }
 
-   
-    
-
+    function update_user_location_on_login( $user_login, $user ) {
+        // Get the user's IP address
+        if(isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARTDED_FOR'] != '') {
+            $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } else {
+            $ip_address = $_SERVER['REMOTE_ADDR'];
+        } 
+      
+        // Use an IP geolocation service to get the user's latitude and longitude
+        $geolocation = file_get_contents('http://ipinfo.io/json/'.$ip_address);
+        $geolocation = json_decode($geolocation);
+      
+        // Check if the geolocation was successful
+        if ($geolocation->status == 'success') {
+          // Set the user's latitude and longitude
+          update_user_meta( $user->ID, 'lat', $geolocation->lat );
+          update_user_meta( $user->ID, 'lng', $geolocation->lon );
+        }
+      }
 }
