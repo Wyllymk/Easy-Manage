@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: User Profile MBER
+ * Template Name: User Profile member
  */
 get_header();?>
 
@@ -13,17 +13,33 @@ $user_avatar = get_avatar_url( $user_id );
 
 
 if ( isset( $_POST['update_user'] ) ) {
-   // Update the user data
-   $user_data->user_email = sanitize_email( $_POST['email'] );
-   $user_data->first_name = sanitize_text_field( $_POST['first_name'] );
-   $user_data->last_name = sanitize_text_field( $_POST['last_name'] );
-   $user_data->display_name = sanitize_text_field( $_POST['nickname'] );
-   $user_data->user_url = esc_url_raw( $_POST['website'] );
-   $user_bio = wp_kses_post( $_POST['user_bio'] );
-   wp_update_user( $user_data );
+     // Check if the current user can edit users
+   if ( current_user_can( 'edit_user', $user_id ) ) {
+    // Update the user data
+    $user_data->user_email = sanitize_email( $_POST['email'] );
+    $user_data->first_name = sanitize_text_field( $_POST['first_name'] );
+    $user_data->last_name = sanitize_text_field( $_POST['last_name'] );
+    $user_data->display_name = sanitize_text_field( $_POST['nickname'] );
+    $user_data->user_url = esc_url_raw( $_POST['website'] );
+    $user_bio = wp_kses_post( $_POST['user_bio'] );
+    $sent = wp_update_user( $user_data );
 
-   // Update the user's biographical information
-   update_user_meta( $user_id, 'description', $user_bio );
+    // Update the user's biographical information
+    $sent = update_user_meta( $user_id, 'description', $user_bio );
+    
+    
+    if ( is_wp_error( $sent ) ) {
+        // There was an error; possibly this user doesn't exist.
+        $error =  'Error.';
+    } else {
+        // Success!
+        $error =  'User profile updated.';
+    }
+
+    } else {
+        // User doesn't have permission to edit users
+        echo "You don't have permission to update user profiles.";
+    }
 
 }
 ?>
@@ -200,7 +216,7 @@ if ( isset( $_POST['update_user'] ) ) {
                                        <label for="lname">Last Name:</label>
                                        <input type="text" class="form-control" id="lname" value="<?php echo esc_attr( $user_data->last_name ); ?>" name="last_name">
                                     </div>
-                                    
+
                                     <div class="form-group col-sm-6">
                                        <label for="cname">Nickname (required):</label>
                                        <input type="text" class="form-control" id="cname" value="<?php echo esc_attr( $user_data->display_name ); ?>" name="nickname">

@@ -120,7 +120,7 @@ if(isset($_POST['signup'])){
                                        <div class="col-lg-12">
                                           <div class="custom-control custom-checkbox mb-3">
                                              <input type="checkbox" class="custom-control-input" id="customCheck1" required>
-                                             <label class="custom-control-label text-white" for="customCheck1">I agree with the terms of use</label>
+                                             <label class="custom-control-label text-white" for="customCheck1">I agree with the <a class="text-white" href="<?php echo esc_url(site_url('/terms-of-service/')); ?>" target="_blank"><u>terms of use</u> </a></label>
                                           </div>
                                        </div>
                                     </div>

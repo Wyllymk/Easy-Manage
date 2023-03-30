@@ -199,6 +199,7 @@ get_header();?>
                             $user_id = $user->ID;
                             $username = $user->user_login;
                             $email = $user->user_email;
+                            $website = $user->user_url;
                             $user_register = $user->user_registered;
                             $registration_status = get_user_meta( $user_id, 'registration_status', true );
                             if ( $registration_status == 'active' ) {
@@ -206,7 +207,7 @@ get_header();?>
                         <tr>
                            <td><?php echo '<span>' . esc_html( $username ) . '</span>';?></td>
                            <td><?php echo '<span>' . esc_html( $email ) . '</span>';?></td>
-                           <td></td>
+                           <td><?php echo '<span>' . esc_html( $website ) . '</span>';?></td>
                            <td><span <?php if ($registration_status == 'inactive') { echo'class="badge bg-danger"'; } ?> <?php if ($registration_status == 'active') { echo'class="badge text-bg-success"'; } ?> <?php if ($registration_status == 'Completed') { echo'class="badge text-bg-success"'; } ?>><?php echo esc_html( $registration_status);?></span></td>
                            <td><?php echo '<span>' . esc_html( date( "d-m-Y", strtotime($user_register ) ) ) . '</span>';?></td>
                         </tr>
